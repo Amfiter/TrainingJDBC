@@ -14,7 +14,7 @@ public class InsertData {
     public void insertData(String query) {
         try (Connection connection = DriverManager.getConnection(URL + DATABASE, USERNAME, PASSWORD);
              Statement statement = connection.createStatement()) {
-            ResultSet resultSet = statement.executeQuery(query);
+            statement.executeUpdate(query);
             System.out.println("Data was inserted");
         } catch (SQLException e) {
             e.printStackTrace();

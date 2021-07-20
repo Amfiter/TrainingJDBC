@@ -4,25 +4,39 @@ import java.util.Date;
 import java.util.StringJoiner;
 
 public class Person {
-    public long id;
+    public int id;
     public String firstName;
     public String secondName;
     public Date birthday;
     public Department department;
 
-    public Person(long id, String firstName, String secondName, Date birthday, Department department) {
+    public Person() {
+    }
+
+    public Person(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public Person(int id, String firstName, String secondName, Date birthday, Department department) {
         this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
         this.birthday = birthday;
         this.department = department;
     }
+    public Person( String firstName, String secondName, Date birthday, Department department) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.birthday = birthday;
+        this.department = department;
+    }
+
 
     public long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

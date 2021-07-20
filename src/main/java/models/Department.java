@@ -4,13 +4,16 @@ import java.util.Date;
 import java.util.StringJoiner;
 
 public class Department {
-    public long id;
+    public int id;
     public String name;
 
     public Department() {
     }
+    public Department(String name) {
+        this.name = name;
+    }
 
-    public Department(long id, String name) {
+    public Department(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -19,7 +22,7 @@ public class Department {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -14,7 +14,7 @@ public class SQL {
                     + "NAME VARCHAR(255) NOT NULL,"
                     + "UNIQUE(NAME))";
 
-    public final static String ADD_FOREIGN_KEY = "ALTER TABLE person ADD CONSTRAINT department_fk FOREIGN KEY (department_id) REFERENCES department(id)";
+    public final static String ADD_FOREIGN_KEY = "ALTER TABLE person ADD CONSTRAINT department_fk FOREIGN KEY (department_id) REFERENCES department(id) ON DELETE CASCADE";
 
     public final static String INSERT_PERSONS = "insert into person(first_name,second_name,birthday,department_id)\n" +
             "     values\n" +
@@ -24,13 +24,13 @@ public class SQL {
             "     ('Владимир','Васильев','1977-07-30',4),\n" +
             "     ('Татьяна','Устинова ','1969-01-02',5),\n" +
             "     ('Фредрик','Бакман ','1998-06-01',6)";
-    public final static String INSERT_DEPARTMENT = "insert into department(name,id)\n" +
+    public final static String INSERT_DEPARTMENT = "insert into department(name)\n" +
             " values\n" +
-            " ('Департамент здравоохранения',1),\n" +
-            " ('Департамент рыбнадзора',2),\n" +
-            " ('Департамент птиц надзора',3),\n" +
-            " ('Какой то непонятной департамент',4),\n" +
-            " ('Департамент чего-то',5),\n" +
-            " ('Департамент образования',6)";
+            " ('Департамент здравоохранения'),\n" +
+            " ('Департамент рыбнадзора'),\n" +
+            " ('Департамент птиц надзора'),\n" +
+            " ('Какой то непонятной департамент'),\n" +
+            " ('Департамент чего-то'),\n" +
+            " ('Департамент образования')";
 
 }
