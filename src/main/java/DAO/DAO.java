@@ -5,7 +5,7 @@ import models.Department;
 import java.util.List;
 
 public interface DAO<T> {
-    void getAll();
+    void printAll();
 
     T getById(int id);
 
