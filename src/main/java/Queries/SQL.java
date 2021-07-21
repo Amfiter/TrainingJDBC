@@ -1,4 +1,4 @@
-package operations;
+package Queries;
 
 public class SQL {
     public final static String CREATE_PERSON_TABLE =
@@ -8,6 +8,7 @@ public class SQL {
                     + "second_name VARCHAR(255) NOT NULL,"
                     + "birthday DATE NOT NULL,"
                     + "department_id INTEGER NOT NULL)";
+
     public final static String CREATE_DEPARTMENT_TABLE =
             "CREATE TABLE department ("
                     + "ID SERIAL PRIMARY KEY,"
@@ -24,6 +25,7 @@ public class SQL {
             "     ('Владимир','Васильев','1977-07-30',4),\n" +
             "     ('Татьяна','Устинова ','1969-01-02',5),\n" +
             "     ('Фредрик','Бакман ','1998-06-01',6)";
+
     public final static String INSERT_DEPARTMENT = "insert into department(name)\n" +
             " values\n" +
             " ('Департамент здравоохранения'),\n" +
@@ -32,5 +34,8 @@ public class SQL {
             " ('Какой то непонятной департамент'),\n" +
             " ('Департамент чего-то'),\n" +
             " ('Департамент образования')";
+    public final static String DROP_PERSON_TABLE = "DROP TABLE IF EXISTS person";
+
+    public final static String DROP_DEPARTMENT_TABLE = "DROP TABLE IF EXISTS department CASCADE";
 
 }

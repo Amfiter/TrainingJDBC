@@ -1,24 +1,21 @@
-package operations;
+package Queries;
 
-import models.Department;
-import org.postgresql.ds.PGSimpleDataSource;
-
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import static connection.Constants.*;
-import static connection.Constants.PASSWORD;
-import static operations.SQL.*;
 
-public class InsertData {
+public class CreateTables {
 
-    public void insertData(String query) {
+    public void createTable(String query) {
         try (Connection connection = DriverManager.getConnection(URL + DATABASE, USERNAME, PASSWORD);
              Statement statement = connection.createStatement()) {
             statement.executeUpdate(query);
-            System.out.println("Data was inserted");
+            System.out.println("Table was created");
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-
 }

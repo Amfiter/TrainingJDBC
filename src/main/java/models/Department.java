@@ -4,8 +4,8 @@ import java.util.Date;
 import java.util.StringJoiner;
 
 public class Department {
-    public int id;
-    public String name;
+    private int id;
+    private String name;
 
     public Department() {
     }
@@ -18,7 +18,7 @@ public class Department {
         this.name = name;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
