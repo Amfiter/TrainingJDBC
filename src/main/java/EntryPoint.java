@@ -46,7 +46,7 @@ public class EntryPoint {
 //        person
         PersonDAO personDAO = new PersonDAO();
 //        personDAO.getAll();
-        personDAO.getById(3);
+//        personDAO.getById(3);
         long millis = System.currentTimeMillis();
         java.sql.Date date = new java.sql.Date(millis);
 //        personDAO.create(new Person("Vladimir", "Stavitskii", date, departmentDAO.getById(3)));
